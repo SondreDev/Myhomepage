@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = oppstart
+
+        function oppstart() {
+            document.getElementById("tegneflate").onmouseover = flyttMus;
+        }
+        function flyttMus(){
+            var ctx = document.getElementById("tegneflate").getContext("2d");
+            ctx.beginPath;
+            ctx.arc(evt.clientX , evt.clientY, 20, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    </script>
+    <style>
+        #tegneflate {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-style: solid;
+        }
+
+        .flate {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="Oppgaver.html">Assignments</a>
+        <a href="Javascript.html">Javascript</a>
+        <a href="programmer.html">Programs</a>
+        <a href="about.html">About Me</a>
+        <a href="" class="active">Script</a>
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+    <canvas class="flate" id="tegneflate" width="500" height="500"></canvas>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+         window.onload = oppstart; 
+        
+        function oppstart() {
+        document.getElementById("btnGenerer").onclick = beregn;
+        }
+
+        function beregn() {
+            var navn = document.getElementById("txtNavn").value;
+            var kjonn = document.getElementById("lstKjonn").value;
+            var alder = document.getElementById("txtAlder").value
+
+            var aarTil100 = 100 - alder;
+
+            var Adjektiv1 = document.getElementById("Adj1").value;
+            var Adjektiv2 = document.getElementById("Adj2").value;
+            var Adjektiv3 = document.getElementById("Adj3").value;
+            var Adjektiv4 = document.getElementById("Adj4").value;
+
+            var historie = "Det var en gang en " + Adjektiv1 + kjonn + " som het " + navn + ". " + navn + " var en " + alder + " år gammel gutt som var glad i å leke med " + Adjektiv2 + ". han kunne leke med" + Adjektiv2 + " hele dagen uten stopp. En dag fikk " + navn + " en super ide " + navn + " skulle leke med " + Adjektiv2 + " i ett " + Adjektiv3 + ". " + navn + " lekte og hadde det gøy helt til en " + Adjektiv4 + " kom kjørende i en hvit varebil." + Adjektiv4 + " spurte om " + navn + " ville være med i bilen om han fikk " + Adjektiv4 + ", " + navn + " svarte selvfølgelig ja";
+
+            document.getElementById("historie").innerHTML = historie;
+            
+		}
+    </script>
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Back</a>
+        <a href="ProveUke39.html">Home</a>
+        <a href="ovpaaord.html" class="active">Øv på ord</a>
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <p class="heroPar">Navn:</p> <input type="text" id="txtNavn" /><br />
+
+	<p class="heroPar">Kjønn: </p><select id="lstKjonn"><option value="gutt">Gutt</option><option value="jente">Jente</option></select><br />
+
+	<p class="heroPar">alder: </p><input type="number" min="0" max="120" id="txtAlder" /><br /> 
+
+		<br>
+		<br>
+
+	<p class="heroPar">Adjektiv nr 1: </p><input class="heroPar" type="text" id="Adj1"> <br>
+
+	<p class="heroPar">Adjektiv nr 2: </p><input class="heroPar" type="text" id="Adj2"> <br>
+
+	<p class="heroPar">Adjektiv nr 3: </p><input class="heroPar" type="text" id="Adj3"> <br>
+
+	<p class="heroPar">Adjektiv nr 4: </p><input class="heroPar" type="text" id="Adj4"> <br>
+
+
+</p>
+<button id="btnGenerer" type="button">Generer Historie</button> 
+<p class="heroPar" id="historie"></p>
+</body>
+</html>

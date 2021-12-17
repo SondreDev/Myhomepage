@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="xmas.css">
 
     <script>
       function button() {
@@ -25,7 +25,23 @@
       <i class="fa fa-bars"></i>
     </a>
   </div>
+<div id="snow"></div>
 
+<script type="module">
+//import the Snow module
+import * as Snow from '/node_modules/snowfall.js/snow.js'
+
+// Snow script included on the page, already.
+window.onload = function () {
+    var snow = new Snow.default({
+        id: 'snow'
+    });
+
+    //Can run the snowfall by calling:
+    snow.start();
+}
+</script>
+      <img class="xmasme" src="img/xmasme.png" alt="Me">
       <img class="gutta" src="img/guttaaaa.png" alt="Guttaaa">
 
 
@@ -34,6 +50,7 @@
       and projects i do on my spare time.
       </p>
 
+        <img class="xmastree" src="img/xmastree.png" alt="xmastree">
 
       <div class="container">
         <img src="img/sondre1.png" alt="sondre" class="image1">
